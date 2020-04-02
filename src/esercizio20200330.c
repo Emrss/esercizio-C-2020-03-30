@@ -160,6 +160,7 @@ int main(int argc, char ** argv) {
 
 	if (memcmp(fibonacci_result_copy,fibonacci_result,(SIZE+1)*sizeof(long))!=0){
 		printf("C'è stato qualche errore\n");
+		free(fibonacci_result);
 		return 1;
 	} else{
 		printf("I due array sono uguali!\n");
