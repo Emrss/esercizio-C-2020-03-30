@@ -36,7 +36,7 @@ unsigned long fibonacci(unsigned int n){
 
 long double pot(long double x, unsigned int n){
 	long double y =x;
-	for (int i =0; i<n;i++){
+	for (int i =1; i<n;i++){
 		x=x * y;
 	}
 	return x;
@@ -45,7 +45,7 @@ long double pot(long double x, unsigned int n){
 
 long double aprox(unsigned int n){
 	//nonostante abbia messo <math.h> non mi riconosce la funzione pow(), di conseguenza l'ho fatta manualmente io
-	long double res = ((pot(PHI,n-1)- pot(1-PHI, n-1))/ sqrt(5));
+	long double res = ((pot(PHI,n)- pot(1-PHI, n))/ sqrt(5));
 	return res;
 }
 
